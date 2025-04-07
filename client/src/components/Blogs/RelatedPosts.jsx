@@ -1,53 +1,51 @@
-export const RelatedPosts = () => {
-  const posts = [
-    {
-      title: "The Future of CCTV: How AI is Transforming Security",
-      excerpt:
-        "Choosing the right CCTV system can be overwhelming with so many options available. This guide highlights five must-have features, including high-definition recording, night vision, remote access, motion detection, and cloud storage",
-      image: "https://cdn.builder.io/api/v1/image/assets/TEMP/615e1bbb310db470fa14fbfd8a5fcaeba91cea6a",
-    },
-    {
-      title: "5 Key Features to Look for in a Modern CCTV System",
-      excerpt:
-        "Artificial Intelligence (AI) is revolutionizing CCTV security, making surveillance smarter and more efficient. From facial recognition to real-time threat detection,",
-      image: "https://cdn.builder.io/api/v1/image/assets/TEMP/b83337ac9c7eb649d67eb8ac1c4232f6a243f202",
-    },
-    {
-      title: "The Future of CCTV: How AI is Transforming Security",
-      excerpt:
-        "Choosing the right CCTV system can be overwhelming with so many options available. This guide highlights five must-have features, including high-definition recording, night vision, remote access, motion detection, and cloud storage",
-      image: "https://cdn.builder.io/api/v1/image/assets/TEMP/615e1bbb310db470fa14fbfd8a5fcaeba91cea6a",
-    },
-    {
-      title: "5 Key Features to Look for in a Modern CCTV System",
-      excerpt:
-        "Artificial Intelligence (AI) is revolutionizing CCTV security, making surveillance smarter and more efficient. From facial recognition to real-time threat detection,",
-      image: "https://cdn.builder.io/api/v1/image/assets/TEMP/b83337ac9c7eb649d67eb8ac1c4232f6a243f202",
-    },
-  ];
+const posts = [
+  {
+    title: "The Future of CCTV: How AI is...",
+    excerpt: "Choosing the right CCTV system can be overwhelming with so man...",
+    image: "/images/blog2.png",
+  },
+  {
+    title: "5 Key Features to Look for in a...",
+    excerpt: "Artificial Intelligence (AI) is revolutionizing CCTV security, ma...",
+    image: "/images/blog3.png",
+  },
+  {
+    title: "The Future of CCTV: How AI is...",
+    excerpt: "Choosing the right CCTV system can be overwhelming with so man...",
+    image: "/images/blog2.png",
+  },
+  {
+    title: "5 Key Features to Look for in a...",
+    excerpt: "Artificial Intelligence (AI) is revolutionizing CCTV security, ma...",
+    image: "/images/blog3.png",
+  },
+];
+export const RelatedPosts = ({ className }) => {
 
   return (
-    <aside className="flex flex-col gap-2 items-start py-2 pr-0 pl-5 border border-black border-opacity-20 w-[399px] max-md:w-full max-md:border-l">
+    <div className={`flex flex-col pl-4 border-l-2 border-gray-200 ${className}`}>
       {posts.map((post, index) => (
-        <article
+        <div
           key={index}
-          className={`flex gap-4 items-start ${index < posts.length - 1 ? "px-0 pt-3 pb-5 w-full border border-black border-opacity-20" : "px-0 pt-3 pb-5 w-full"}`}
+          className="flex items-start gap-4 py-4 border-b border-gray-200 last:border-b-0"
         >
-          <img
-            src={post.image}
-            alt=""
-            className="w-[100px] h-[80px] rounded-[8px]"
-          />
-          <div className="flex flex-col flex-1 gap-4 justify-center items-center px-0 py-1">
-            <h3 className="w-full text-lg font-medium tracking-tight leading-5 text-black">
+          <div className="w-28 h-20 flex-shrink-0">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full  object-cover rounded"
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h4 className="text-base font-medium text-gray-900 truncate">
               {post.title}
-            </h3>
-            <p className="overflow-hidden w-full h-9 text-base text-black opacity-60 text-ellipsis">
+            </h4>
+            <p className="text-sm text-gray-500  mt-1">
               {post.excerpt}
             </p>
           </div>
-        </article>
+        </div>
       ))}
-    </aside>
+    </div>
   );
 };
