@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-primary-background: rgba(255, 255, 255, 1);
+    --color-primary-foreground: rgba(0, 0, 0, 1);
+
+    --color-secondary-background: rgba(0, 0, 0, 1);
+    --color-secondary-foreground: rgba(255, 255, 255, 1);
+
+    --color-accent-background: rgba(5, 99, 153, 0.06);
+    --color-accent-foreground: rgba(5, 99, 153, 1);
+
+    --color-accent-secondary: rgba(147, 201, 64, 1);
+
+    --color-card-background: rgba(235, 243, 247, 1);
+
+    --color-border-primary: rgba(0, 0, 0, 0.3);
+}
