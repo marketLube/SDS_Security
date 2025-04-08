@@ -33,7 +33,7 @@ export const ServiceCard = ({ data, style, className }) => {
     return (
         <div
             style={style}
-            className={` ${className} w-full flex  flex-col-reverse md:flex-row   flex-1/2  border-2 border-accent-background   bg-card-background  left-1/2 transform -translate-x-1/2  rounded-2xl p-5 md:pl-10 my-5  `}
+            className={` ${className} w-full flex  flex-col-reverse items-start md:flex-row   flex-1/2  border-2 border-accent-background   bg-card-background  left-1/2 transform -translate-x-1/2  rounded-2xl p-5 md:pl-10 my-5  `}
         >
             {/* left  */}
             <div className=" flex flex-col md:mt-28 gap-14 min-h-full">

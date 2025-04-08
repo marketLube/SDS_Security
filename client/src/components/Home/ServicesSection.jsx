@@ -14,7 +14,7 @@ export const ServicesSection = () => {
             />
 
             {/* Stacked Service Cards */}
-            <div className="relative w-full  flex justify-center mt-4 h-[750px] sm:h-[900px] md:h-[550px] ">
+            <div className="relative w-full  flex justify-center mt-4 h-[850px] sm:h-[900px] md:h-[650px] ">
                 {servicesList?.map((value, index) => (
                     <ServiceCard
                         data={value}
